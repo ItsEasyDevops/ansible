@@ -7,4 +7,4 @@
     - name: print course information
       ansible.builtin.debug:
         msg: "Hello, this is {{ COURSE }} and it lasts for {{ DURATION }}. And Instructor: {{ INSTRUCTOR }}"
-          
+        
