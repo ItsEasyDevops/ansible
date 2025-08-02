@@ -11,3 +11,8 @@
       course_name: "DevOps with Ansible"
     ansible.builtin.debug:
       msg: "Hello, this is {{ course_name }} and it lasts for {{ duration }}. And Instructor: {{ instructor_name }}"
+    
+  - name: print course information
+    ansible.builtin.debug:
+      msg: "Hello, this is {{ course_name }} and it lasts for {{ duration }}. And Instructor: {{ instructor_name }}"
+    
