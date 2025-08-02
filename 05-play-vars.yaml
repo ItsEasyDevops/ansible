@@ -1,0 +1,12 @@
+- name: play level variables
+  hosts: local
+  connection: local # No need of username and password 
+  vars:
+    course_name: "Ansible Basics"
+    course_duration: "2 weeks"
+    course_instructor: "John Doe"
+  tasks:
+  - name: print course information
+    ansible.builtin.debug:
+      msg: "Hello, this is {{ course_name }} and it lasts for {{ course_duration }}. Instructor: {{ course_instructor }}"
+      
