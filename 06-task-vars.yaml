@@ -8,6 +8,6 @@
   tasks:
   - name: print course information
     vars:
-      course_name: "DevOps with Ansible"
+      # course_name: "DevOps with Ansible"
     ansible.builtin.debug:
       msg: "Hello, this is {{ course_name }} and it lasts for {{ duration }}. And Instructor: {{ instructor_name }}"
