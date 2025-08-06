@@ -11,21 +11,21 @@
   #   - course.yaml
   
   # vars_prompt:
-    - name: COURSE
-      prompt: "Enter the course name: "
-      private: false
+  #   - name: COURSE
+  #     prompt: "Enter the course name: "
+  #     private: false
     
-    - name: DURATION
-      prompt: "Enter the course duration: "
-      private: false
+  #   - name: DURATION
+  #     prompt: "Enter the course duration: "
+  #     private: false
 
-    - name: INSTRUCTOR
-      prompt: "Enter the instructor name: "
-      private: false
+  #   - name: INSTRUCTOR
+  #     prompt: "Enter the instructor name: "
+  #     private: false
 
-    - name: GREETING
-      prompt: "Enter the greeting message: "
-      private: false
+  #   - name: GREETING
+  #     prompt: "Enter the greeting message: "
+  #     private: false
 
   tasks:
     - name: Print course information
