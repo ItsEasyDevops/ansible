@@ -7,8 +7,8 @@
     INSTRUCTOR: "Siva -- FROM VARS" 
     GREETING: "Welcome to Ansible -- FROM VARS"
 
-  vars_files:
-    - course.yaml
+  # vars_files:
+  #   - course.yaml
   
   vars_prompt:
     - name: COURSE
