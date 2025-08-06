@@ -10,7 +10,7 @@
   # vars_files:
   #   - course.yaml
   
-  vars_prompt:
+  # vars_prompt:
     - name: COURSE
       prompt: "Enter the course name: "
       private: false
