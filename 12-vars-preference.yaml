@@ -1,0 +1,41 @@
+- name: Understanding the preference of variable sources in ansible
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Ansible for Devops -- FROM VARS"
+    DURATION: "3 months -- FROM VARS"
+    INSTRUCTOR: "Siva -- FROM VARS" 
+    GREETING: "Welcome to Ansible -- FROM VARS"
+
+  vars_files:
+    - course.yaml
+  
+  vars_prompt:
+    - name: COURSE
+      prompt: "Enter the course name: "
+      private: false
+    
+    - name: DURATION
+      prompt: "Enter the course duration: "
+      private: false
+
+    - name: INSTRUCTOR
+      prompt: "Enter the instructor name: "
+      private: false
+
+    - name: GREETING
+      prompt: "Enter the greeting message: "
+      private: false
+
+  tasks:
+    - name: Print course information from vars
+      ansible.builtin.debug:
+        msg: "Hello, this is {{ COURSE }} and its duration is {{ DURATION }}. Instructor: {{ INSTRUCTOR }}. Greeting: {{ GREETING }}"
+    
+    - name: Print course information from vars_files
+      ansible.builtin.debug:
+        msg: "Hello, this is {{ COURSE }} and its duration is {{ DURATION }}. Instructor: {{ INSTRUCTOR }}. Greeting: {{ GREETING }} from vars_files"
+    
+    - name: Print course information from vars_prompt
+      ansible.builtin.debug:
+        msg: "Hello, this is {{ COURSE }} and its duration is {{ DURATION }}. Instructor: {{ INSTRUCTOR }}. Greeting: {{ GREETING }} from vars_prompt"
