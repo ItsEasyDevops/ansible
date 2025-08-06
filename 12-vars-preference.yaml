@@ -39,3 +39,12 @@
     - name: Print course information from vars_prompt
       ansible.builtin.debug:
         msg: "Hello, this is {{ COURSE }} and its duration is {{ DURATION }}. Instructor: {{ INSTRUCTOR }}. Greeting: {{ GREETING }}"
+    
+    - name: Print course information from task variables
+      vars:
+        COURSE: "Ansible for Devops -- FROM TASK VARS"
+        DURATION: "3 months -- FROM TASK VARS"
+        INSTRUCTOR: "Siva -- FROM TASK VARS"
+        GREETING: "Welcome to Ansible -- FROM TASK VARS"
+      ansible.builtin.debug:
+        msg: "Hello, this is {{ COURSE }} and its duration is {{ DURATION }}. Instructor: {{ INSTRUCTOR }}. Greeting: {{ GREETING }}"
