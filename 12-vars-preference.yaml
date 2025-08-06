@@ -1,11 +1,11 @@
 - name: Understanding the preference of variable sources in ansible
   hosts: local
   connection: local
-  vars:
-    COURSE: "Ansible for Devops -- FROM VARS"
-    DURATION: "3 months -- FROM VARS"
-    INSTRUCTOR: "Siva -- FROM VARS" 
-    GREETING: "Welcome to Ansible -- FROM VARS"
+  # vars:
+  #   COURSE: "Ansible for Devops -- FROM VARS"
+  #   DURATION: "3 months -- FROM VARS"
+  #   INSTRUCTOR: "Siva -- FROM VARS" 
+  #   GREETING: "Welcome to Ansible -- FROM VARS"
 
   # vars_files:
   #   - course.yaml
@@ -36,3 +36,11 @@
         # GREETING: "Welcome to Ansible -- FROM TASK VARS"
       ansible.builtin.debug:
         msg: "Hello, this is {{ COURSE }} and its duration is {{ DURATION }}. Instructor: {{ INSTRUCTOR }}. Greeting: {{ GREETING }}"
+
+
+#1 -- Prompt
+#2 - task
+#3 - File
+#4 - Prompt
+#5 - Play
+#6 - Inventory
