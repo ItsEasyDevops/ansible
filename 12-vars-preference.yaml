@@ -38,9 +38,9 @@
         msg: "Hello, this is {{ COURSE }} and its duration is {{ DURATION }}. Instructor: {{ INSTRUCTOR }}. Greeting: {{ GREETING }}"
 
 
-#1 -- Prompt
+#1 - Command Line Arguments
 #2 - task
 #3 - File
 #4 - Prompt
-#5 - Play
+#5 - Play [Playbook]
 #6 - Inventory
