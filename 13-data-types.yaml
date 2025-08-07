@@ -1,0 +1,19 @@
+- name: ansible datatypes
+  hosts: local
+  connection: local
+  vars:
+    DURATION: 120 # This is a number
+    COURSE: "DevOps" # This is a string
+    IS_LIVE: true # This is a boolean
+    TOOLS: # This is a list
+      - Linux
+      - Shell
+      - Ansible
+    CONCEPTS: # This is a dictionary
+      CI: Jenkins
+      SCRIPTING: "Shell, Ansible, Python"
+
+  tasks:
+   - name: Print course information
+     ansible.builtin.debug:
+       msg: "Course: {{ COURSE }}, Duration: {{ DURATION }}, Live: {{ IS_LIVE }}, Tools: {{ TOOLS }}, Concepts: {{ CONCEPTS }}" 
