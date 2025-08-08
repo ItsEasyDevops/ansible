@@ -9,3 +9,17 @@
       - "Siva"
       - "Siva 2"
       - "Siva 3"
+
+
+- name: Install Packages
+  hosts: frontend
+  become: yes
+  tasks:
+    - name: Installing Packages
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: installed
+      loop:
+      - nginx
+      - mysql
+      - zip  
