@@ -1,0 +1,7 @@
+- name: functions
+  hosts: local
+  connection: local
+  tasks:
+    - name: Check undefined variable
+      ansible.builtin.debug:
+        msg: "{{ undefined_Variable | default('Example Value') }}"
