@@ -20,3 +20,14 @@
       ansible.builtin.debug:
         msg: "Hello, {{ item }}!"  # Print each name from the list
       loop: "{{ persons.split(',') }}" # Loop through the list created by splitting the string
+
+    - name: Convert Map into List
+      vars:
+        course:
+          name: "Ansible"
+          duration: "2 months"
+          trainer: "Siva"
+      ansible.builtin.debug:
+        msg: "Course Details: {{ course | dict2items }}" # Convert map to list of items
+        # dict2items converts a dictionary into a list of dictionaries with 'key' and 'value' keys
+        
