@@ -48,10 +48,8 @@
         msg: "Hello, {{ name | upper}}!" # Convert string to uppercase
 
     - name: Check if the IP Address is valid
-      vars:
-        - ip_address: "300.345.286.210" # Invalid IP address
-        - ip_address: "129.22.130.249" # Valid IP address
       ansible.builtin.debug:
         msg: "IP Address is: {{ ip_address | ansible.utils.ipaddr }} "
       loop:
-        "{{ ip_address }}"  
+        - { ip_address: "300.345.286.210" } # Invalid IP address
+        - { ip_address: "129.22.130.249" } # Valid IP address
