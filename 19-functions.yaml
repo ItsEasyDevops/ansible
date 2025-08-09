@@ -15,3 +15,8 @@
     - name: Convert String to List
       ansible.builtin.debug:
         msg: "Hello, {{ persons.split(',') }}!"
+
+    - name: Print each name from the List
+      ansible.builtin.debug:
+        msg: "Hello, {{ item }}!"  # Print each name from the list
+      loop: "{{ persons.split(',') }}!" # Loop through the list created by splitting the string
