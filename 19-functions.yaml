@@ -51,5 +51,5 @@
       vars:
         ip_address: "300.345.286.210" # Invalid IP address
       ansible.builtin.debug:
-        msg: "IP Address is: {{ ansible.utils.ipaddr }} "
+        msg: "IP Address is: {{ ip_address | ansible.utils.ipaddr }} "
         
