@@ -30,4 +30,8 @@
       ansible.builtin.debug:
         msg: "Course Details: {{ course | dict2items }}" # Convert map to list of items
         # dict2items converts a dictionary into a list of dictionaries with 'key' and 'value' keys
-        
+
+    - name: Convert List into Map
+      ansible.builtin.debug:
+        msg: "Course Details: {{ course | items2dict }}" # Convert list of items back to a dictionary
+        # items2dict converts a list of dictionaries with 'key' and 'value' keys into a single dictionary
