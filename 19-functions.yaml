@@ -10,4 +10,8 @@
   
     - name: Print Names
       ansible.builtin.debug:
-        msg: "{{ persons }}" # Print the string of names
+        msg: "Hello, {{ persons }}!" # Print the string of names
+
+    - name: Convert String to List
+      ansible.builtin.debug:
+        msg: "Hello, {{ persons.split(',') }}!"
