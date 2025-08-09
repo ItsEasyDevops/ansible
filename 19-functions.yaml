@@ -46,4 +46,10 @@
         name: "Test Name" 
       ansible.builtin.debug:
         msg: "Hello, {{ name | upper}}!" # Convert string to uppercase
+
+    - name: Check if the IP Address is valid
+      vars:
+        ip_address: "300.345.286.210" # Invalid IP address
+      ansible.builtin.debug:
+        msg: "IP Address is: {{ ansible.utils.ipaddr }} "
         
