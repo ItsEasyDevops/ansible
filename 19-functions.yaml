@@ -32,6 +32,14 @@
         # dict2items converts a dictionary into a list of dictionaries with 'key' and 'value' keys
 
     - name: Convert List into Map
+      vars:
+        course:
+          - key: "name"
+          - value: "Ansible"
+          - key: "duration"
+          - value: "2 months"
+          - key: "trainer"
+          - value: "Siva"
       ansible.builtin.debug:
         msg: "Course Details: {{ course | items2dict }}" # Convert list of items back to a dictionary
         # items2dict converts a list of dictionaries with 'key' and 'value' keys into a single dictionary
