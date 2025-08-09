@@ -1,0 +1,13 @@
+- name: Converting String into List
+  hosts: local
+  connection: local
+  vars:
+    persons: "Albert, Bob, Charlie" # String of names separated by commas
+  tasks: 
+    - name: Check undefined variables
+      ansible.builtin.debug:
+        msg: "Hello, {{ person | default('World') }}!"  # Default to 'World' if 'person' is undefined"
+  
+    - name: Print Names
+      ansible.builtin.debug:
+        msg: "{{ persons }}" # Print the string of names
