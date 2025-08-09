@@ -19,4 +19,4 @@
     - name: Print each name from the List
       ansible.builtin.debug:
         msg: "Hello, {{ item }}!"  # Print each name from the list
-      loop: "{{ persons.split(',') }}!" # Loop through the list created by splitting the string
+      loop: "{{ persons.split(',') }}" # Loop through the list created by splitting the string
