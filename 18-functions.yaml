@@ -5,8 +5,7 @@
     - name: Check undefined variable
       ansible.builtin.debug:
         msg: "{{ undefined_Variable | default('Example Value') }}"
-  
-  tasks:
+
     - name: Touch files with an optional mode
       ansible.builtin.file:
         dest: "{{ item.path }}"          # Path of the file to create or update
