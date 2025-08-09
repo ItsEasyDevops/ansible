@@ -40,3 +40,10 @@
       ansible.builtin.debug:
         msg: "Course Details: {{ course | items2dict }}" # Convert list of items back to a dictionary
         # items2dict converts a list of dictionaries with 'key' and 'value' keys into a single dictionary
+
+    - name: Convert to String to Uppercase
+      vars: 
+        name: "Test Name" 
+      ansible.builtin.debug:
+        msg: "Hello, {{ name | upper}}!" # Convert string to uppercase
+        
