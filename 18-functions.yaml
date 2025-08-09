@@ -5,3 +5,16 @@
     - name: Check undefined variable
       ansible.builtin.debug:
         msg: "{{ undefined_Variable | default('Example Value') }}"
+  
+  tasks:
+    - name: Touch files with an optional mode
+      ansible.builtin.file:
+        dest: "{{ item.path }}"          # Path of the file to create or update
+        state: touch                     # "touch": create file if missing, update mtime if it exists
+        mode: "{{ item.mode | default('omit') }}"  
+          # If 'mode' is given in the loop item, set the file's permissions
+          # If 'mode' is not given, omit the parameter so permissions remain unchanged
+      loop:
+        - path: /tmp/foo                  # File path, no mode → keep existing permissions
+        - path: /tmp/bar                  # File path with explicit permissions
+          mode: '0444'                     # Permissions: read-only for all users
