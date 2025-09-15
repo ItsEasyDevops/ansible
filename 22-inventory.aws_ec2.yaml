@@ -1,14 +1,14 @@
 plugin: aws_ec2
 regions:
   - us-east-1
-filters: # only running instances with tag Name=frontend
-  tag:Name: frontend
-  instance-state-name: running
-hostnames: # to use private ip address for connection
-  - private-ip-address
-keyed_groups: # to create dynamic groups based on tags
-  - key: tags.Name
-    prefix: ""
-    separator: " "
-compose:
-  ansible_host: private-ip-address
+# filters: # only running instances with tag Name=frontend
+#   tag:Name: frontend
+#   instance-state-name: running
+# hostnames: # to use private ip address for connection
+#   - private-ip-address
+# keyed_groups: # to create dynamic groups based on tags
+#   - key: tags.Name
+#     prefix: ""
+#     separator: " "
+# compose:
+#   ansible_host: private-ip-address
