@@ -9,6 +9,6 @@ hostnames: # to use private ip address for connection
 keyed_groups: # to create dynamic groups based on tags
   - key: tags.Name
     prefix: ""
-    seperator: ""
+    separator: " "
 compose:
   ansible_host: private-ip-address
