@@ -1,6 +1,7 @@
 - name: Install nginx
   hosts: dynamic_frontend
   become: yes
+  serial: 5
   tasks:
     - name: Install nginx package
       ansible.builtin.dnf:
