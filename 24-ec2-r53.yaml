@@ -8,6 +8,7 @@
       - frontend
     subnet_id: subnet-01851e0e855197f99
     sg_id: sg-0aa27df1889c9933e
+    zone: easydevops.fun
   tasks: 
     - name: Create EC2 instance
       amazon.aws.ec2_instance:
