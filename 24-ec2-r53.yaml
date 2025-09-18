@@ -52,7 +52,7 @@
     #   when: item.item == "frontend"
 
     - name: Create Route53 records
-      amazon.aws.route53_record:
+      amazon.aws.route53:
         state: present
         zone: "{{ zone }}"
         record: "{{ zone if item.item == 'frontend' else item.item ~ '.' ~ zone}}"
